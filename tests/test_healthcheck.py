@@ -18,6 +18,7 @@ def test_script_runs_and_exits_zero():
         cwd=ROOT,
         capture_output=True,
         text=True,
+        check=False,
     )
     assert result.returncode == 0
     assert result.stdout == "ok\n"
